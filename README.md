@@ -73,12 +73,12 @@ For the final classification model, we used GradientBoostingClassifier (GB) with
 ![tsne_wsb](./images/tsne_wsb.png)
 
 # Conclusion:
-In our effort to build a classification model we tested various classification models. Each approach had its own pros and cons. Our final model performed with a final F1-score of 92.41% after hyperparameter tuning over the baseline of 84.8%.
+In our effort to build a classification model we tested various classification models. Each approach had its own pros and cons. Our final model performed with a final F1-score of 42.06% after hyperparameter tuning over the baseline.
 
-Our Feature importances showed the technical data ADX, RSI, and CCI to split the most observations for classification but performed poorly on their own. The model containing only Price and Technicals data had a F1-score of 43.07% which is lower than our target based on distribution of our price movement direction feature.
+Our Feature importances showed the sentiment analysis over technical data ADX, RSI, and CCI to split the most observations for classification. The model containing only Price and Technicals data had a F1-score of 40.8% which is lower than our target based on distribution of our price movement direction feature.
 
 # Recommendation:
-It is important to consider what retail investors are doing and their inherent effect they have on the market. Our model indicates that it is possible to predict the next days price movement based on post sentiments of the previous day. Retail investors consistently communicate with each other on their trade decisions and recommend stocks to look out for. These sentiments can influence price through increase in volume of trading by those that are reading and following WallStreetBets posts.
+It is important to consider what retail investors are doing and their inherent effect they have on the market. Our model indicates that predicting the next days price movement based on post sentiments of the previous day will not perform better than predicting the stock will go down 100% of the time. This is not a winning strategy. Retail investors consistently communicate with each other on their trade decisions and recommend stocks to look out for. These sentiments can be a important feature to add to our trading model and overall strategy with the addition of sentiment on other platforms, subreddits, and news outlets.
 
 # Next steps
 Collect and test on larger dataset containing other stock subreddits as well as twitter and other financial news platforms, then further hyperparameter tuning and evaluation on our new dataset. We can further increase the technicals indicator to support the addition sentiments analysis for our new model. Historically the data used is from unprecedented market movement from short squeezes. It is important to do more research to understand how newer posts stock sentiments predict stock price now.
