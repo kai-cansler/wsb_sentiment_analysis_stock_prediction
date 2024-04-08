@@ -100,6 +100,7 @@ Collect and test on larger dataset containing other stock subreddits as well as 
 │   ├── importances.png
 │   └── tsne_wsb.png
 ├── presentation.pdf
+├── requirements.txt
 └── README.md
 ```
 
@@ -115,4 +116,6 @@ API:
 1. API_KEY for AlphaVantage is hidden in the jupyter notebook. You can utilize https://www.alphavantage.co/support/#api-key to easily obtain an API key for access. Just enter your email address, organization, and description of your title and replace the os.environ.get("API_KEY") with your AlphaVantage API Key.
 
 Packages:
-
+1. Open the requirements.txt file.
+2. Use **!pip install** for each package within requirements.txt
+3. Now you're ready to RUN ALL!
