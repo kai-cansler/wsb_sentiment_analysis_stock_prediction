@@ -33,7 +33,7 @@ A Small Boutique investment firm MarketProphit is looking to understand the effe
 
 # Data Understanding
 
-We got the sentiment data from reddit_wsb.csv from [WallStreetBets Kaggle](https://www.kaggle.com/datasets/gpreda/reddit-wallstreetsbets-posts) dataset. The data contains 50,069 posts. The dataset contains title and body text data, url, number of comments, timestamp, and score.
+We got the sentiment data from reddit_wsb.csv from [WallStreetBets Kaggle](https://www.kaggle.com/datasets/gpreda/reddit-wallstreetsbets-posts) dataset. The data contains 50,069 posts. The dataset contains title and body text data, url, number of comments, timestamp, and score. We also use [AlphaVantage](https://www.alphavantage.co/documentation/) API to collect stocks financial data and technical indicators for historic 20 years.
 
 1. WallStreetBets Post Data (reddit_wsb.csv)
     - Each line of this file after the header row represents one rating of one movie by one user and are on a 5-star scale.
@@ -49,11 +49,11 @@ We got the sentiment data from reddit_wsb.csv from [WallStreetBets Kaggle](https
 
 We learned alot about our retail investors and their posts on WallStreetBets. The Title text contained more positive sentiment than negative sentiment where as the Body text contained slightly higher negative sentiment that positive sentiment. Being an online forum there is large usage of memetic language that needs to be accounted for such as "moon", "tendies", and "bagholder". Many posts contain Daily and Weekly recommendations to look for and will be important to look for to manage our risk. Retail investors also higher average negative sentiment toward financial institutions, brokerages, and some news outlets.
 
-![distribution of ratings](./images/dist_ratings.png)
+![word_cloud_positive](./images/wc_pos.png)
 
-![word cloud](./images/word_cloud.png)
+![word cloud_negative](./images/wc_neg.png)
 
-![distribution of genres](./images/dist_genre.png)
+![top10_orgs_sentiment](./images/avg_sentiment_orgs.png)
 
 # Modeling
 
@@ -65,6 +65,12 @@ We explored several classification models.
 5. GradientBoostingClassifier
 
 For the final classification model, we used GradientBoostingClassifier (GB) with Price, Technicals, and Sentiment data. It performed on par with RandomForest with high F1 score. GradientBoosting was chosen over RandomForest for use of gradient descent and residuals to optimize and reduce bias. It is more flexible, since you can use any differentiable loss function or regularization in fitting the data. 
+
+![conf_matrix_final](./images/conf_matri_wsb.png)
+
+![importances](./images/importances.png)
+
+![tsne_wsb](./images/tsne_wsb.png)
 
 # Conclusion:
 In our effort to build a classification model we tested various classification models. Each approach had its own pros and cons. Our final model performed with a final F1-score of 92.41% after hyperparameter tuning over the baseline of 84.8%.
@@ -86,10 +92,13 @@ Collect and test on larger dataset containing other stock subreddits as well as 
 │   ├── reddit_wsb.csv.zip
 │   └── tickers.csv
 ├── images
-│   ├── dist_ratings.png
-│   ├── dist_genre.png
-│   ├── word_cloud.png
-│   └── stream_movie.png
+│   ├── wsb_cover.png
+│   ├── wc_pos.png
+│   ├── wc_neg.png
+│   ├── avg_sentiment_orgs.png
+│   ├── conf_matri_wsb.png
+│   ├── importances.png
+│   └── tsne_wsb.png
 ├── presentation.pdf
 └── README.md
 ```
