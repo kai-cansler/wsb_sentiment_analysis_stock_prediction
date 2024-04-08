@@ -6,7 +6,7 @@
 
 * [Overview](#Overview)
 * [Exploratory Data Analysis](#Visualizations)
-* [Collborative Filtering Model Model](#Modeling)
+* [Classification Modeling](#Modeling)
 * [Next Steps](#Next-Steps)
 * [Repository Structure](#Repository-Structure)
 * [Reproducibility](#Reproducibility)
