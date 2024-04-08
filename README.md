@@ -1,6 +1,6 @@
 # Hi! This project is to analyze WallStreetBets post sentiment and model stock movement predictions.
 
-![cover](./images/stream_movie.avif)
+![cover](./images/wsb_cover.png)
 
 # Index
 
