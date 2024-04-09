@@ -105,7 +105,7 @@ Collect and test on larger dataset containing other stock subreddits as well as 
 │   ├── conf_matri_wsb.png
 │   ├── importances.png
 │   └── tsne_wsb.png
-├── presentation.pdf
+├── phase5_presentation.pdf
 ├── requirements.txt
 └── README.md
 ```
