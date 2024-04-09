@@ -77,8 +77,14 @@ In our effort to build a classification model we tested various classification m
 
 Our Feature importances showed the sentiment analysis over technical data ADX, RSI, and CCI to split the most observations for classification. The model containing only Price and Technicals data had a F1-score of 40.8% which is lower than our target based on distribution of our price movement direction feature.
 
-# Recommendation:
+# Analysis
 It is important to consider what retail investors are doing and their inherent effect they have on the market. Our model indicates that predicting the next days price movement based on post sentiments of the previous day will not perform better than predicting the stock will go down 100% of the time. This is not a winning strategy. Retail investors consistently communicate with each other on their trade decisions and recommend stocks to look out for. These sentiments can be a important feature to add to our trading model and overall strategy with the addition of sentiment on other platforms, subreddits, and news outlets.
+
+# Recommendation
+1. From our EDA we learned that retail investors have positive sentiment in posts around daily and weekly discussions and recommendations. We want to observe and monitor these posts to look for any indicators on market movement.
+2. Within WSB posts we learned about the sentiment of popular online words such as Moon, Hold, and Rocket. My recommendation is to analyze posts for these sentiments to make informed decisions on what retail investors are doing.
+3. Negative Sentiment is an important feature when it comes to modeling stock price movement. My recommendation is to utilize the model to understand fear and bearish sentiment on stocks for market opportunities to either buy at a discount or short trade.
+
 
 # Next steps
 Collect and test on larger dataset containing other stock subreddits as well as twitter and other financial news platforms, then further hyperparameter tuning and evaluation on our new dataset. We can further increase the technicals indicator to support the addition sentiments analysis for our new model. Historically the data used is from unprecedented market movement from short squeezes. It is important to do more research to understand how newer posts stock sentiments predict stock price now.
